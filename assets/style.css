@@ -1,0 +1,224 @@
+:root {
+    --text-family-1: "roboto", sans-serif;
+    --text-family-2: "Trebuchet MS", "sans-serif";
+    --text-size: clamp(5pt, 2vw, 12.5pt);
+    --font-color: black; 
+    --border-color: var(var(--accent));
+    --background-color: hsl(0, 0%, 96%);
+    --box-border: border-box; 
+    --accent:hsl(204, 41%, 60%);
+    --primary-color: hsl(200, 61%, 45%);
+    --secondary-color:hsl(210, 39%, 41%);
+}   
+
+body {
+    font-size: var(--text-size);
+    background-color: var(--background-color);
+    margin: 8vw;
+    font-family: var(--text-family-2);
+    text-align: justify;
+    color: var(--font-color);
+}
+header,
+main,
+section,
+footer
+.objectives,
+.skills,
+.training,
+.internship,
+.education,
+.thesis {
+    position: relative;
+    width: 100%;
+}
+a {text-decoration: none;
+    color: var(--accent);
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: var(--accent)}
+
+/* FORMATTING */
+p {
+    font-family: var(--text-family-2);
+}
+.width_100 {
+    width: 100%;
+}
+.margin_0 {
+    margin: 0px;
+}
+.line {
+    width: 100%;
+    height: 0.5vw;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+h2 {
+    font-size: clamp(9pt, 2vw, 30.5pt);
+    color: var(--accent);
+    margin-bottom: 0px
+}
+
+h3 {
+    font-size: clamp(5.5pt, 2vw, 12.5pt);
+    color: var(--secondary-color);
+    margin-bottom: 0px;
+    margin-top: 1opx;
+}
+.black-color {
+    color: black;
+}
+
+.align-right {
+    text-align: right;
+}
+/* DISPLAY */
+.d-flex-container {
+    display: flex;
+}
+
+.d-grid-container {
+    display: grid;
+}
+
+/* HEADER */
+header {
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        gap: 10%;
+        justify-content: center;
+}
+/* Photo */
+.profile-img {
+    /* size */
+    width: clamp(50px, 50vw, 300px);
+    /* border */
+    border: 0.1rem solid var(--accent);
+    border-radius: 50%;
+    box-sizing: var(--box-border);
+}
+
+/* TEXT */
+header div.d-grid-container {
+    text-align: left;
+    margin-left: 0%;
+}
+@media (max-width:1530px){
+    header div.d-grid-container {
+            text-align: center;
+            margin-left: 0%;
+        }
+}
+header div.d-grid-container>h1 {
+    font-size: clamp(1.5rem,10vw,8rem);
+    font-family: var(--text-family-1);
+    margin: 0px;
+    margin-top: 5%;
+}
+
+header h1>span{
+    color: var(--accent);
+}
+
+header div.d-grid-container p{
+    font-family: var(--text-family-1);
+}
+
+header div.d-grid-container>p:nth-child(2) {
+    color: var(--accent)
+}
+
+header div.d-grid-container>p:nth-child(2) span {
+    font-size: clamp(10pt, 4vw, 12.5pt);
+}
+
+header div.d-grid-container>p:nth-child(3) {
+    color:var(--secondary-color);
+    margin: 0px;
+}
+
+/* END_HEADER */
+
+/* MAIN */
+main {
+    margin-top: 10vw;
+    gap: 1vw;
+    flex-wrap: wrap;
+    flex:1 1 100%;
+    text-align:left;
+}
+/* SECTION */
+.training .d-flex-container{
+    flex-wrap: nowrap;
+    flex: 1 1 100%;
+}
+.training .d-flex-container div {
+width: 100%;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 1vw;
+    color: white;
+    height: clamp(56px,20vw,230px);
+}
+
+footer h2 {
+    color: white;
+    font-size: clamp(5.5pt, 2vw, 12.5pt);
+}
+
+footer .d-flex-container div {
+    font-size: clamp(3.5pt, 2vw, 10.5pt);
+}
+
+footer .d-flex-container {
+    margin-top: clamp(1%,3vw,2%);
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1 33.33%;
+}
+
+footer .d-flex-container img {
+    width: clamp(5px,3vw,25px);
+    transform: translateY(35%);
+}
+
+footer p {
+    text-align: center;
+    margin-top: 3%;
+    font-size: clamp(2.5pt, 1vw, 7.5pt);
+}
+
+/* button*/
+
+.buttonAction {
+    color: white;
+    text-align: center;
+    font-size: clamp(2.5pt, 1vw, 9.5pt);
+    background-color: var(--accent);
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    box-shadow: 0 9px rgb(154, 147, 130);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: clamp(90px, 11vw, 900px);
+    height: clamp(50px, 11vw, 700px);
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.buttonAction:hover,
+.buttonAction:focus,
+.buttonAction:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(2.1);
+    transform: scale(2.1);
+    background-color:hsl(204, 41%, 40%);
+    -webkit-tap-highlight-color:hsl(204, 41%, 60%);
+}
